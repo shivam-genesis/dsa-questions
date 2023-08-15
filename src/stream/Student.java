@@ -2,7 +2,7 @@ package stream;
 
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable<Student> {
 	public Student(int id, String name, Integer marks, List<String> contactNum) {
 		super();
 		this.id = id;
@@ -46,6 +46,10 @@ public class Student {
 
 	public void setContactNum(List<String> contactNum) {
 		this.contactNum = contactNum;
+	}
+
+	public int compareTo(Student s) {
+		return this.contactNum.size() - s.contactNum.size();
 	}
 
 	@Override

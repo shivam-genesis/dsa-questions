@@ -16,9 +16,9 @@ public class Employee implements Comparable<Employee> {
 
 	@Override
 	public int compareTo(Employee e) {
-		//return this.id-e.id; //for ascending order
-		//return e.id-this.id; //for descending order
-		return (this.name).compareTo(e.name); //for comparing name in ascending order
+		// return this.id-e.id; //for ascending order
+		// return e.id-this.id; //for descending order
+		return (this.name).compareTo(e.name); // for comparing name in ascending order
 	}
 
 	public int getId() {

@@ -1,6 +1,7 @@
 package stream;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -20,6 +21,13 @@ public class StreamAPI {
 		lst.add(new Student(7, "Mahfooz", 456, List.of("0192", "786765")));
 		lst.add(new Student(8, "Abhishek", 621, List.of("09804", "346542")));
 		lst.add(new Student(9, "Ashutosh", 576, List.of("65765")));
+		lst.add(new Student(10, "Shivam", 300, List.of("2653", "118")));
+
+		Map<String, Long> studentCount = lst.stream()
+				.collect(Collectors.groupingBy(s -> s.getName(), Collectors.counting()));
+		System.out.println(studentCount);
+
+		System.out.println("--------------------------------------------------------------");
 
 		List<Boolean> a = l.stream().filter(e -> e == true).collect(Collectors.toList());
 		System.out.println(a);
@@ -28,7 +36,7 @@ public class StreamAPI {
 
 		list.stream().sorted().distinct().forEach(e -> System.out.print(e + " "));
 		System.out.println();
-		
+
 		System.out.println("--------------------------------------------------------------");
 		// Sort basis of ID Use of comparable
 		lst.stream().sorted((s1, s2) -> s1.getId() - s2.getId())

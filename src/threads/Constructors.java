@@ -7,7 +7,7 @@ public class Constructors {
 		
 		
 		Play p = new Play();
-		Thread t1 = new Thread(p,"Shivam");
+		Thread t1 = new Thread(p);
 		
 		t1.start();
 		

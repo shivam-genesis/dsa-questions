@@ -28,5 +28,4 @@ public class SortEmployee {
 		Collections.sort(emps, new CityComparator());
 		System.out.println(emps);
 	}
-
 }
